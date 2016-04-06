@@ -1,0 +1,19 @@
+def bajada(maxx):
+    for i in range (maxx,0,-1): ##de n, hasta 0, retrocediendo
+        for j in range (0,i,1):
+            print ("*",end="")  ##las * estarán corridas
+        print ("")
+    return ""
+
+def subida(maxx):
+    for i in range (1,maxx,1): #de cero, hasta n, de 1 en 1
+        for j in range (0,i+1,1): ##de subida
+            print ("*",end="")
+        print ("") ##deja un espacio y hace un salto a la
+                ###siguiente linea
+    return ""
+
+#principal
+n=int(input("Ingrese número de estrellas"))
+print (bajada(n),end="") ##para que se haga continua y
+print (subida(n))           ##no deje un espacio entre ambas
